@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "hackclub",
+  "version": "${version}",
+  "name": "testmod",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/hackclub/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "dev.fluffy.hackclub.client.HackclubClient"
+    ],
+    "main": [
+      "dev.fluffy.hackclub.Hackclub"
+    ]
+  },
+  "mixins": [
+    "hackclub.mixins.json",
+    {
+      "config": "hackclub.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
